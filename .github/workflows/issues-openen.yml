@@ -1,3 +1,10 @@
+# This is 2 auto reply on the issues. 1 with a person who created script and 1 from github.
+# https://gist.github.com/Link-/f817f7523a3ac5de6861efd7be6bc3fb
+# https://www.youtube.com/watch?v=-hVG9z0fCac&t=501s
+
+## You need to create an issue to be able to get the workflow running.
+## After that you will get 2 auto reply
+
 name: Create a comment on new issues
 
 on:
