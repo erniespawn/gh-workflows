@@ -29,16 +29,5 @@ jobs:
     steps:
       - name: Init some vars
         id: env_vars
-        run: |
-          echo "APP_NAME=$app_name" >> $GITHUB_OUTPUT
-    
-          reg_domain="${{  env.REGISTRY_DOMAIN  }}"
-          echo "REGISTRY_DOMAIN=$reg_domain" >> $GITHUB_OUTPUT
-    
-          reg_url="${{  env.REGISTRY_URL  }}"
-          echo "REGISTRY_URL=$reg_url" >> $GITHUB_OUTPUT
-    
-          echo "FULL_IMG_REF=$reg_url/$app_name:${{  vars.VERSION || github.sha  }}" >> $GITHUB_OUTPUT
-    
-          echo "IMG_REF=${{  vars.VERSION || github.sha  }}" >> $GITHUB_OUTPUT
-    
+        run: echo "IMG_REF=${{  vars.VERSION || github.sha  }}" >> $GITHUB_OUTPUT
+      
