@@ -29,5 +29,4 @@ jobs:
     steps:
       - name: Init some vars
         id: env_vars
-        run: echo "IMG_REF=${{  vars.VERSION || github.sha  }}" >> $GITHUB_OUTPUT
       
