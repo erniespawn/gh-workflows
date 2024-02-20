@@ -30,7 +30,7 @@ jobs:
       - name: Init some vars
         id: env_vars
         run: |
-          app_name="${{  vars.APP_NAME || fromJson(vars.LEGACY_GITLAB_PROJECT_DATA).path || github.event.repository.name  }}"
+          app_name="${{  vars.APP_NAME || github.event.repository.name  }}"
     
           echo "APP_NAME=$app_name" >> $GITHUB_OUTPUT
     
