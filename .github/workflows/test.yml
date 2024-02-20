@@ -30,7 +30,7 @@ jobs:
       - name: Init some vars
         id: env_vars
         run: |
-          app_name="${{  vars.APP_NAME || github.event.repository.name  }}"
+          app_name="${{  vars.APP_NAME }}"
     
           echo "APP_NAME=$app_name" >> $GITHUB_OUTPUT
     
